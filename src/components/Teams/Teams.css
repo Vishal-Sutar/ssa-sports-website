@@ -1,0 +1,91 @@
+/* components/Teams/Teams.css */
+.teams-section {
+  padding: 5rem 5%;
+  background-color: #16213e;
+  color: white;
+}
+
+.teams-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.teams-section h2::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background-color: #ffd700;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.teams-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.team-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.team-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #228b22;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-logo::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: #888;
+  font-size: 0.9rem;
+}

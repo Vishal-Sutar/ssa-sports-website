@@ -1,0 +1,89 @@
+/* components/Hero/Hero.css */
+.hero {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: #16213e;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.hero-button {
+  background-color: #228b22;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #98fb98;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+}
+
+.hero-image {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-image {
+    min-height: 50vh;
+  }
+}
